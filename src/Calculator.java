@@ -53,14 +53,29 @@ public class Calculator {
     public void performCalculation() {
 
         switch (operator) {
-            case "+" -> result = operandOne + operandTwo;
-            case "-" -> result = operandOne - operandTwo;
-            case "/" -> result = operandOne / operandTwo;
-            case "*" -> result = operandOne * operandTwo;
-            default -> {
+            case "+":
+                result = operandOne + operandTwo;
+                break;
+            case "-":
+                result = operandOne - operandTwo;
+                break;
+            case "/":
+                if (operandTwo != 0) {
+                    result = operandOne / operandTwo;
+                }
+                else {
+                    System.out.println("Diviosion by 0 not possible.");
+                    return;
+                }
+                break;
+
+            case "*":
+                result = operandOne * operandTwo;
+                break;
+
+            default:
                 System.out.println("False Operator.");
                 return;
-            }
         }
     }
 }
