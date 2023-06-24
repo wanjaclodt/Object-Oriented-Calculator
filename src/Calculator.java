@@ -16,9 +16,9 @@ public class Calculator {
 
     // 4. Define setter and getter methods.
 
-    public double getOperandOne() {
-        return operandOne;
-    }
+    //public double getOperandOne() {
+    //    return operandOne;
+    //}
 
     public void setOperandOne(double newOperandOne) {
         this.operandOne = newOperandOne;
